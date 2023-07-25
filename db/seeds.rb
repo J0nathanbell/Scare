@@ -9,11 +9,14 @@
 # require "open-uri"
 # Killer.destroy_all
 
-# file = URI.open('https://res.cloudinary.com/dbec58ylb/image/upload/v1629888780/freddy_m2duge.jpg')
 # killer = Killer.new(name: "The Nightmare", alias: 'Freddy Krueger', bio: 'The Nemesis is a Model T-103 Tyrant', location: 'Raccoon City', price: 2000, user_id: 1)
 # killer.photo.attach(io: file, filename: 'nemesis.jpeg', content_type: 'image/png')
 # killer.save!
-
+User.create!(
+  email: 'jonathanbell@example.com',
+  password: 'dogpoo',
+  password_confirmation: 'dogpoo'
+)
 nemesis = Killer.create!(
   [ user_id: 1,
     name: 'The Tyrant',
